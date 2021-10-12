@@ -8,7 +8,7 @@ import filterReducer from './reducers/filterReducer'
 
 const reducer = combineReducers({
   notes: noteReducer,
-  filter: filterReducer
+  filter: filterReducer,
 })
 
 const store = createStore(reducer)
