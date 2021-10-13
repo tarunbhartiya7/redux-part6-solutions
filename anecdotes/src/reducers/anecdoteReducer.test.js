@@ -1,8 +1,8 @@
 import deepFreeze from 'deep-freeze'
 import anecdoteReducer from './anecdoteReducer'
 
-describe('noteReducer', () => {
-  test('returns new state with action NEW_NOTE', () => {
+describe('anecdoteReducer', () => {
+  test('returns new state with action NEW_ANECDOTE', () => {
     const state = []
     const action = {
       type: 'NEW_ANECDOTE',
