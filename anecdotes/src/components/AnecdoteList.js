@@ -28,12 +28,10 @@ const AnecdoteList = () => {
       .sort((a, b) => b.votes - a.votes)
   )
 
-  const vote = ({ id, content }) => {
-    dispatch(addVote(id))
-    setTimeout(() => {
-      dispatch(clearNotification())
-    }, 5000)
-    dispatch(setNotification(`you voted ${content}`))
+  const vote = (anecdote) => {
+    dispatch(addVote(anecdote))
+
+    dispatch(setNotification(`you voted '${anecdote.content}'`, 5))
   }
 
   if (anecdotes.length === 0) {
